@@ -1,0 +1,6 @@
+.env
+.env.local
+backend/.env
+backend/.venv/
+node_modules/
+dist/
