@@ -1,0 +1,466 @@
+{"kind":"deck","id":"ai-library-ucd-fix","slideCount":15,"slideSize":{"width":1280,"height":720}}
+{"kind":"slide","slide":1,"id":"oezkak"}
+{"kind":"slide","slide":2,"id":"2gyus8"}
+{"kind":"slide","slide":3,"id":"ql2app"}
+{"kind":"slide","slide":4,"id":"g0w6wu"}
+{"kind":"slide","slide":5,"id":"8ue91n"}
+{"kind":"slide","slide":6,"id":"4f91ab"}
+{"kind":"slide","slide":7,"id":"9s5bm1"}
+{"kind":"slide","slide":8,"id":"k2hdbn"}
+{"kind":"slide","slide":9,"id":"vfnsn4"}
+{"kind":"slide","slide":10,"id":"f9u4se"}
+{"kind":"slide","slide":11,"id":"st5zdm"}
+{"kind":"slide","slide":12,"id":"zoczcy"}
+{"kind":"slide","slide":13,"id":"1itscn"}
+{"kind":"slide","slide":14,"id":"i1w17v"}
+{"kind":"slide","slide":15,"id":"ropteg"}
+{"kind":"image","slide":1,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":1,"id":"3","role":"cover contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":1,"id":"4","role":"cover accent rule","shapeType":"rect","bbox":[64,86,7,455]}
+{"kind":"textbox","slide":1,"id":"5","role":"kicker","text":"AI LIBRARY APP","textPreview":"AI LIBRARY APP","textChars":14,"textLines":1,"bbox":[86,88,520,26]}
+{"kind":"textbox","slide":1,"id":"6","role":"cover title","text":"Applying User-Centered Design to an AI-Supported Digital Library","textPreview":"Applying User-Centered Design to an AI-Supported Digital Library","textChars":64,"textLines":1,"bbox":[82,130,785,184]}
+{"kind":"textbox","slide":1,"id":"7","role":"cover subtitle","text":"A revised presentation focused on implementation, evaluation, and improvements across the full system life cycle.","textPreview":"A revised presentation focused on implementation, evaluation, and improvements across the full system life cycle.","textChars":113,"textLines":1,"bbox":[86,326,610,86]}
+{"kind":"shape","slide":1,"id":"8","role":"cover moment panel","shapeType":"roundRect","bbox":[86,456,390,92]}
+{"kind":"textbox","slide":1,"id":"9","role":"cover moment","text":"From analysis to deployment","textPreview":"From analysis to deployment","textChars":27,"textLines":1,"bbox":[112,478,336,40]}
+{"kind":"image","slide":2,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":2,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":2,"id":"4","role":"header","text":"WEEK 1","textPreview":"WEEK 1","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":2,"id":"5","role":"header","text":"02 / 15","textPreview":"02 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":2,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":2,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":2,"id":"8","role":"title","text":"Introduction","textPreview":"Introduction","textChars":12,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":2,"id":"9","role":"subtitle","text":"The project combines digital library functions with AI-assisted recommendations to improve book discovery.","textPreview":"The project combines digital library functions with AI-assisted recommendations to improve book discovery.","textChars":106,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":2,"id":"10","role":"card panel: System","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":2,"id":"11","role":"card accent: System","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":2,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":2,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":2,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":2,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":2,"id":"16","role":"card label","text":"System","textPreview":"System","textChars":6,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"17","role":"card body: System","text":"The AI Library App allows\nusers to browse books,\nsearch by topic or author,\nopen book details, save\nbooks, and use an AI\nassistant for\nrecommendations.","textPreview":"The AI Library App allows | users to browse books, | search by topic or author, | open book details, save | books, and use an AI | assistant for | recommendations.","textChars":151,"textLines":7,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":2,"id":"18","role":"card panel: Problem","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":2,"id":"19","role":"card accent: Problem","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":2,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":2,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":2,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":2,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":2,"id":"24","role":"card label","text":"Problem","textPreview":"Problem","textChars":7,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"25","role":"card body: Problem","text":"Users often struggle to find\nthe right book quickly when\nthey do not know the exact\ntitle or need help\nidentifying\nbeginner-friendly resources.","textPreview":"Users often struggle to find | the right book quickly when | they do not know the exact | title or need help | identifying | beginner-friendly resources.","textChars":143,"textLines":6,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":2,"id":"26","role":"card panel: Users","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":2,"id":"27","role":"card accent: Users","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":2,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":2,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":2,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":2,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":2,"id":"32","role":"card label","text":"Users","textPreview":"Users","textChars":5,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"33","role":"card body: Users","text":"The main users are\nuniversity students who need\ndigital access to academic\nbooks, references, and study\nmaterials.","textPreview":"The main users are | university students who need | digital access to academic | books, references, and study | materials.","textChars":114,"textLines":5,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"textbox","slide":3,"id":"2","role":"header","text":"WEEK 2","textPreview":"WEEK 2","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":3,"id":"3","role":"header","text":"03 / 15","textPreview":"03 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":3,"id":"4","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":3,"id":"5","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":3,"id":"6","role":"title","text":"Information System Planning","textPreview":"Information System Planning","textChars":27,"textLines":1,"bbox":[64,86,780,142]}
+{"kind":"textbox","slide":3,"id":"7","role":"subtitle","text":"Planning defined the scope, timeline, and technology choices needed for smooth implementation.","textPreview":"Planning defined the scope, timeline, and technology choices needed for smooth implementation.","textChars":94,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":3,"id":"8","role":"timeline line","shapeType":"rect","bbox":[110,420,1060,4]}
+{"kind":"shape","slide":3,"id":"9","role":"timeline node","shapeType":"ellipse","bbox":[130,406,28,28]}
+{"kind":"textbox","slide":3,"id":"10","role":"timeline week","text":"W1","textPreview":"W1","textChars":2,"textLines":1,"bbox":[122,358,70,24]}
+{"kind":"textbox","slide":3,"id":"11","role":"timeline label","text":"Intro","textPreview":"Intro","textChars":5,"textLines":1,"bbox":[100,448,115,48]}
+{"kind":"textbox","slide":3,"id":"12","role":"timeline note","text":"Defined project\nproblem and\nobjective.","textPreview":"Defined project | problem and | objective.","textChars":38,"textLines":3,"bbox":[100,496,150,110]}
+{"kind":"shape","slide":3,"id":"13","role":"timeline node","shapeType":"ellipse","bbox":[350,406,28,28]}
+{"kind":"textbox","slide":3,"id":"14","role":"timeline week","text":"W2","textPreview":"W2","textChars":2,"textLines":1,"bbox":[342,358,70,24]}
+{"kind":"textbox","slide":3,"id":"15","role":"timeline label","text":"Planning","textPreview":"Planning","textChars":8,"textLines":1,"bbox":[320,448,115,48]}
+{"kind":"textbox","slide":3,"id":"16","role":"timeline note","text":"Set scope,\nfeatures,\ntimeline, and\ntools.","textPreview":"Set scope, | features, | timeline, and | tools.","textChars":41,"textLines":4,"bbox":[320,496,150,110]}
+{"kind":"shape","slide":3,"id":"17","role":"timeline node","shapeType":"ellipse","bbox":[570,406,28,28]}
+{"kind":"textbox","slide":3,"id":"18","role":"timeline week","text":"W3","textPreview":"W3","textChars":2,"textLines":1,"bbox":[562,358,70,24]}
+{"kind":"textbox","slide":3,"id":"19","role":"timeline label","text":"Analysis","textPreview":"Analysis","textChars":8,"textLines":1,"bbox":[540,448,115,48]}
+{"kind":"textbox","slide":3,"id":"20","role":"timeline note","text":"Survey findings\nshaped\nrequirements.","textPreview":"Survey findings | shaped | requirements.","textChars":36,"textLines":3,"bbox":[540,496,150,110]}
+{"kind":"shape","slide":3,"id":"21","role":"timeline node","shapeType":"ellipse","bbox":[790,406,28,28]}
+{"kind":"textbox","slide":3,"id":"22","role":"timeline week","text":"W4","textPreview":"W4","textChars":2,"textLines":1,"bbox":[782,358,70,24]}
+{"kind":"textbox","slide":3,"id":"23","role":"timeline label","text":"Design","textPreview":"Design","textChars":6,"textLines":1,"bbox":[760,448,115,48]}
+{"kind":"textbox","slide":3,"id":"24","role":"timeline note","text":"Prepared\nwireframes and\nUML models.","textPreview":"Prepared | wireframes and | UML models.","textChars":35,"textLines":3,"bbox":[760,496,150,110]}
+{"kind":"shape","slide":3,"id":"25","role":"timeline node","shapeType":"ellipse","bbox":[1010,406,28,28]}
+{"kind":"textbox","slide":3,"id":"26","role":"timeline week","text":"W5+","textPreview":"W5+","textChars":3,"textLines":1,"bbox":[1002,358,70,24]}
+{"kind":"textbox","slide":3,"id":"27","role":"timeline label","text":"Build","textPreview":"Build","textChars":5,"textLines":1,"bbox":[980,448,115,48]}
+{"kind":"textbox","slide":3,"id":"28","role":"timeline note","text":"Implementation\ncontinued into\ntest and\ndeployment.","textPreview":"Implementation | continued into | test and | deployment.","textChars":50,"textLines":4,"bbox":[980,496,150,110]}
+{"kind":"image","slide":4,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":4,"id":"3","role":"metrics contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":4,"id":"4","role":"header","text":"WEEK 3","textPreview":"WEEK 3","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":4,"id":"5","role":"header","text":"04 / 15","textPreview":"04 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":4,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":4,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":4,"id":"8","role":"title","text":"System Analysis","textPreview":"System Analysis","textChars":15,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":4,"id":"9","role":"subtitle","text":"Survey findings and requirement analysis showed why AI support and clear book details were necessary.","textPreview":"Survey findings and requirement analysis showed why AI support and clear book details were necessary.","textChars":101,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":4,"id":"10","role":"metric panel: Beta-test participants","shapeType":"roundRect","bbox":[92,404,330,174]}
+{"kind":"shape","slide":4,"id":"11","role":"metric accent: Beta-test participants","shapeType":"rect","bbox":[92,404,330,7]}
+{"kind":"textbox","slide":4,"id":"12","role":"metric value","text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[114,428,286,54]}
+{"kind":"textbox","slide":4,"id":"13","role":"metric label","text":"Beta-test participants","textPreview":"Beta-test participants","textChars":22,"textLines":1,"bbox":[116,486,282,38]}
+{"kind":"textbox","slide":4,"id":"14","role":"metric note","text":"ICT students","textPreview":"ICT students","textChars":12,"textLines":1,"bbox":[116,536,282,22]}
+{"kind":"shape","slide":4,"id":"15","role":"metric panel: Core system functions identified","shapeType":"roundRect","bbox":[462,404,330,174]}
+{"kind":"shape","slide":4,"id":"16","role":"metric accent: Core system functions identified","shapeType":"rect","bbox":[462,404,330,7]}
+{"kind":"textbox","slide":4,"id":"17","role":"metric value","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[484,428,286,54]}
+{"kind":"textbox","slide":4,"id":"18","role":"metric label","text":"Core system functions identified","textPreview":"Core system functions identified","textChars":32,"textLines":1,"bbox":[486,486,282,38]}
+{"kind":"textbox","slide":4,"id":"19","role":"metric note","text":"Login, library, detail, save, profile, AI, activity","textPreview":"Login, library, detail, save, profile, AI, activity","textChars":51,"textLines":1,"bbox":[486,536,282,22]}
+{"kind":"shape","slide":4,"id":"20","role":"metric panel: Major problem areas","shapeType":"roundRect","bbox":[832,404,330,174]}
+{"kind":"shape","slide":4,"id":"21","role":"metric accent: Major problem areas","shapeType":"rect","bbox":[832,404,330,7]}
+{"kind":"textbox","slide":4,"id":"22","role":"metric value","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[854,428,286,54]}
+{"kind":"textbox","slide":4,"id":"23","role":"metric label","text":"Major problem areas","textPreview":"Major problem areas","textChars":19,"textLines":1,"bbox":[856,486,282,38]}
+{"kind":"textbox","slide":4,"id":"24","role":"metric note","text":"Book selection and recommendation clarity","textPreview":"Book selection and recommendation clarity","textChars":41,"textLines":1,"bbox":[856,536,282,22]}
+{"kind":"image","slide":5,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":5,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":5,"id":"4","role":"header","text":"WEEK 4","textPreview":"WEEK 4","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":5,"id":"5","role":"header","text":"05 / 15","textPreview":"05 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":5,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":5,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":5,"id":"8","role":"title","text":"Information System Design Overview","textPreview":"Information System Design Overview","textChars":34,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":5,"id":"9","role":"subtitle","text":"Wireframes and layout planning translated user needs into structured screens before development began.","textPreview":"Wireframes and layout planning translated user needs into structured screens before development began.","textChars":102,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":5,"id":"10","role":"card panel: Wireframes","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":5,"id":"11","role":"card accent: Wireframes","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":5,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":5,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":5,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":5,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":5,"id":"16","role":"card label","text":"Wireframes","textPreview":"Wireframes","textChars":10,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"17","role":"card body: Wireframes","text":"Wireframes were created for\nthe Library page, Book\nDetail page, AI Assistant\npage, and Profile page\nbefore implementation\nstarted.","textPreview":"Wireframes were created for | the Library page, Book | Detail page, AI Assistant | page, and Profile page | before implementation | started.","textChars":130,"textLines":6,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":5,"id":"18","role":"card panel: Design Goals","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":5,"id":"19","role":"card accent: Design Goals","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":5,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":5,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":5,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":5,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":5,"id":"24","role":"card label","text":"Design Goals","textPreview":"Design Goals","textChars":12,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"25","role":"card body: Design Goals","text":"The design focused on clear\nnavigation, readable content\nhierarchy, and a connected\nuser flow across the app.","textPreview":"The design focused on clear | navigation, readable content | hierarchy, and a connected | user flow across the app.","textChars":109,"textLines":4,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":5,"id":"26","role":"card panel: Implementation Role","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":5,"id":"27","role":"card accent: Implementation Role","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":5,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":5,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":5,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":5,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":5,"id":"32","role":"card label","text":"Implementation Role","textPreview":"Implementation Role","textChars":19,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"33","role":"card body: Implementation Role","text":"Early layout planning\nreduced confusion during\ncoding and made later\ntesting more consistent.","textPreview":"Early layout planning | reduced confusion during | coding and made later | testing more consistent.","textChars":93,"textLines":4,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"image","slide":6,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":6,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":6,"id":"4","role":"header","text":"WEEK 4","textPreview":"WEEK 4","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":6,"id":"5","role":"header","text":"06 / 15","textPreview":"06 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":6,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":6,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":6,"id":"8","role":"title","text":"Design Outputs: Library and Book Detail","textPreview":"Design Outputs: Library and Book Detail","textChars":39,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":6,"id":"9","role":"subtitle","text":"These pages were designed to support browsing, filtering, book evaluation, and continued discovery.","textPreview":"These pages were designed to support browsing, filtering, book evaluation, and continued discovery.","textChars":99,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":6,"id":"10","role":"card panel: Library Page","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":6,"id":"11","role":"card accent: Library Page","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":6,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":6,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":6,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":6,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":6,"id":"16","role":"card label","text":"Library Page","textPreview":"Library Page","textChars":12,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"17","role":"card body: Library Page","text":"The Library page was\ndesigned as the main entry\npoint with search, category\nfilters, sorting, and save\nactions.","textPreview":"The Library page was | designed as the main entry | point with search, category | filters, sorting, and save | actions.","textChars":111,"textLines":5,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":6,"id":"18","role":"card panel: Book Detail Page","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":6,"id":"19","role":"card accent: Book Detail Page","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":6,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":6,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":6,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":6,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":6,"id":"24","role":"card label","text":"Book Detail Page","textPreview":"Book Detail Page","textChars":16,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"25","role":"card body: Book Detail Page","text":"The Book Detail page was\ndesigned to show complete\nmetadata, file availability,\nand stronger decision-making\nsupport.","textPreview":"The Book Detail page was | designed to show complete | metadata, file availability, | and stronger decision-making | support.","textChars":117,"textLines":5,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":6,"id":"26","role":"card panel: Related Books","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":6,"id":"27","role":"card accent: Related Books","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":6,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":6,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":6,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":6,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":6,"id":"32","role":"card label","text":"Related Books","textPreview":"Related Books","textChars":13,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"33","role":"card body: Related Books","text":"Related books were added to\nhelp users continue\nexploring once they found a\nrelevant title.","textPreview":"Related books were added to | help users continue | exploring once they found a | relevant title.","textChars":91,"textLines":4,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"image","slide":7,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":7,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":7,"id":"4","role":"header","text":"WEEK 4","textPreview":"WEEK 4","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":7,"id":"5","role":"header","text":"07 / 15","textPreview":"07 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":7,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":7,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":7,"id":"8","role":"title","text":"Design Outputs: AI, Profile, and UML Models","textPreview":"Design Outputs: AI, Profile, and UML Models","textChars":43,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":7,"id":"9","role":"subtitle","text":"The AI assistant, profile features, and system diagrams clarified interaction, workflow, and architecture.","textPreview":"The AI assistant, profile features, and system diagrams clarified interaction, workflow, and architecture.","textChars":106,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":7,"id":"10","role":"card panel: AI Assistant","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":7,"id":"11","role":"card accent: AI Assistant","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":7,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":7,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":7,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":7,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":7,"id":"16","role":"card label","text":"AI Assistant","textPreview":"AI Assistant","textChars":12,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"17","role":"card body: AI Assistant","text":"The AI page was designed for\nnatural-language\nrecommendation queries\ngrounded in the real\ncatalog.","textPreview":"The AI page was designed for | natural-language | recommendation queries | grounded in the real | catalog.","textChars":98,"textLines":5,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":7,"id":"18","role":"card panel: Profile","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":7,"id":"19","role":"card accent: Profile","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":7,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":7,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":7,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":7,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":7,"id":"24","role":"card label","text":"Profile","textPreview":"Profile","textChars":7,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"25","role":"card body: Profile","text":"The Profile page was\ndesigned to show saved books\nand recent activity so users\ncould return to previous\nactions.","textPreview":"The Profile page was | designed to show saved books | and recent activity so users | could return to previous | actions.","textChars":112,"textLines":5,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":7,"id":"26","role":"card panel: UML Models","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":7,"id":"27","role":"card accent: UML Models","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":7,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":7,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":7,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":7,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":7,"id":"32","role":"card label","text":"UML Models","textPreview":"UML Models","textChars":10,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"33","role":"card body: UML Models","text":"Use case and activity\ndiagrams supported analysis,\nwhile sequence and component\ndiagrams supported system\ndesign and implementation.","textPreview":"Use case and activity | diagrams supported analysis, | while sequence and component | diagrams supported system | design and implementation.","textChars":132,"textLines":5,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"image","slide":8,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":8,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":8,"id":"4","role":"header","text":"WEEK 5","textPreview":"WEEK 5","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":8,"id":"5","role":"header","text":"08 / 15","textPreview":"08 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":8,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":8,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":8,"id":"8","role":"title","text":"Information Systems Development","textPreview":"Information Systems Development","textChars":31,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":8,"id":"9","role":"subtitle","text":"Development converted the design into a working full-stack application with AI-assisted recommendation logic.","textPreview":"Development converted the design into a working full-stack application with AI-assisted recommendation logic.","textChars":109,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":8,"id":"10","role":"card panel: Frontend","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":8,"id":"11","role":"card accent: Frontend","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":8,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":8,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":8,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":8,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":8,"id":"16","role":"card label","text":"Frontend","textPreview":"Frontend","textChars":8,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"17","role":"card body: Frontend","text":"The frontend was developed\nwith React, TypeScript, and\nVite to provide routing,\ntheming, and responsive page\nlayouts.","textPreview":"The frontend was developed | with React, TypeScript, and | Vite to provide routing, | theming, and responsive page | layouts.","textChars":117,"textLines":5,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":8,"id":"18","role":"card panel: Backend","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":8,"id":"19","role":"card accent: Backend","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":8,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":8,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":8,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":8,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":8,"id":"24","role":"card label","text":"Backend","textPreview":"Backend","textChars":7,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"25","role":"card body: Backend","text":"The backend used Node.js and\nExpress to process AI\nrequests, retrieve books\nfrom Supabase, and send\ncontext to Gemini.","textPreview":"The backend used Node.js and | Express to process AI | requests, retrieve books | from Supabase, and send | context to Gemini.","textChars":118,"textLines":5,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":8,"id":"26","role":"card panel: Challenge","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":8,"id":"27","role":"card accent: Challenge","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":8,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":8,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":8,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":8,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":8,"id":"32","role":"card label","text":"Challenge","textPreview":"Challenge","textChars":9,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"33","role":"card body: Challenge","text":"A key challenge was\npreventing the AI from\nacting like a general\nchatbot. This was solved by\ngrounding responses in real\ncatalog data.","textPreview":"A key challenge was | preventing the AI from | acting like a general | chatbot. This was solved by | grounding responses in real | catalog data.","textChars":134,"textLines":6,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"textbox","slide":9,"id":"2","role":"header","text":"WEEK 6","textPreview":"WEEK 6","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":9,"id":"3","role":"header","text":"09 / 15","textPreview":"09 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":9,"id":"4","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":9,"id":"5","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":9,"id":"6","role":"title","text":"Testing in Information Systems","textPreview":"Testing in Information Systems","textChars":30,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":9,"id":"7","role":"subtitle","text":"Functional testing verified whether the main user flows were stable enough for deployment.","textPreview":"Functional testing verified whether the main user flows were stable enough for deployment.","textChars":90,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":9,"id":"8","role":"table header","shapeType":"roundRect","bbox":[82,340,250,48]}
+{"kind":"textbox","slide":9,"id":"9","role":"table header text","text":"Feature","textPreview":"Feature","textChars":7,"textLines":1,"bbox":[96,352,222,22]}
+{"kind":"shape","slide":9,"id":"10","role":"table header","shapeType":"roundRect","bbox":[360,340,580,48]}
+{"kind":"textbox","slide":9,"id":"11","role":"table header text","text":"Expected Result","textPreview":"Expected Result","textChars":15,"textLines":1,"bbox":[374,352,552,22]}
+{"kind":"shape","slide":9,"id":"12","role":"table header","shapeType":"roundRect","bbox":[958,340,170,48]}
+{"kind":"textbox","slide":9,"id":"13","role":"table header text","text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[972,352,142,22]}
+{"kind":"shape","slide":9,"id":"14","role":"table cell","shapeType":"rect","bbox":[82,388,250,48]}
+{"kind":"textbox","slide":9,"id":"15","role":"table text","text":"Login","textPreview":"Login","textChars":5,"textLines":1,"bbox":[94,398,226,26]}
+{"kind":"shape","slide":9,"id":"16","role":"table cell","shapeType":"rect","bbox":[360,388,580,48]}
+{"kind":"textbox","slide":9,"id":"17","role":"table text","text":"User can sign in successfully","textPreview":"User can sign in successfully","textChars":29,"textLines":1,"bbox":[372,398,556,26]}
+{"kind":"shape","slide":9,"id":"18","role":"table cell","shapeType":"rect","bbox":[958,388,170,48]}
+{"kind":"textbox","slide":9,"id":"19","role":"table text","text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[970,398,146,26]}
+{"kind":"shape","slide":9,"id":"20","role":"table cell","shapeType":"rect","bbox":[82,436,250,48]}
+{"kind":"textbox","slide":9,"id":"21","role":"table text","text":"Library Browsing","textPreview":"Library Browsing","textChars":16,"textLines":1,"bbox":[94,446,226,26]}
+{"kind":"shape","slide":9,"id":"22","role":"table cell","shapeType":"rect","bbox":[360,436,580,48]}
+{"kind":"textbox","slide":9,"id":"23","role":"table text","text":"Books load from database","textPreview":"Books load from database","textChars":24,"textLines":1,"bbox":[372,446,556,26]}
+{"kind":"shape","slide":9,"id":"24","role":"table cell","shapeType":"rect","bbox":[958,436,170,48]}
+{"kind":"textbox","slide":9,"id":"25","role":"table text","text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[970,446,146,26]}
+{"kind":"shape","slide":9,"id":"26","role":"table cell","shapeType":"rect","bbox":[82,484,250,48]}
+{"kind":"textbox","slide":9,"id":"27","role":"table text","text":"Search and Filter","textPreview":"Search and Filter","textChars":17,"textLines":1,"bbox":[94,494,226,26]}
+{"kind":"shape","slide":9,"id":"28","role":"table cell","shapeType":"rect","bbox":[360,484,580,48]}
+{"kind":"textbox","slide":9,"id":"29","role":"table text","text":"User narrows results correctly","textPreview":"User narrows results correctly","textChars":30,"textLines":1,"bbox":[372,494,556,26]}
+{"kind":"shape","slide":9,"id":"30","role":"table cell","shapeType":"rect","bbox":[958,484,170,48]}
+{"kind":"textbox","slide":9,"id":"31","role":"table text","text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[970,494,146,26]}
+{"kind":"shape","slide":9,"id":"32","role":"table cell","shapeType":"rect","bbox":[82,532,250,48]}
+{"kind":"textbox","slide":9,"id":"33","role":"table text","text":"Book Detail Page","textPreview":"Book Detail Page","textChars":16,"textLines":1,"bbox":[94,542,226,26]}
+{"kind":"shape","slide":9,"id":"34","role":"table cell","shapeType":"rect","bbox":[360,532,580,48]}
+{"kind":"textbox","slide":9,"id":"35","role":"table text","text":"Full book details are displayed","textPreview":"Full book details are displayed","textChars":31,"textLines":1,"bbox":[372,542,556,26]}
+{"kind":"shape","slide":9,"id":"36","role":"table cell","shapeType":"rect","bbox":[958,532,170,48]}
+{"kind":"textbox","slide":9,"id":"37","role":"table text","text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[970,542,146,26]}
+{"kind":"shape","slide":9,"id":"38","role":"table cell","shapeType":"rect","bbox":[82,580,250,48]}
+{"kind":"textbox","slide":9,"id":"39","role":"table text","text":"Save Book","textPreview":"Save Book","textChars":9,"textLines":1,"bbox":[94,590,226,26]}
+{"kind":"shape","slide":9,"id":"40","role":"table cell","shapeType":"rect","bbox":[360,580,580,48]}
+{"kind":"textbox","slide":9,"id":"41","role":"table text","text":"Selected book is saved to profile","textPreview":"Selected book is saved to profile","textChars":33,"textLines":1,"bbox":[372,590,556,26]}
+{"kind":"shape","slide":9,"id":"42","role":"table cell","shapeType":"rect","bbox":[958,580,170,48]}
+{"kind":"textbox","slide":9,"id":"43","role":"table text","text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[970,590,146,26]}
+{"kind":"shape","slide":9,"id":"44","role":"table cell","shapeType":"rect","bbox":[82,628,250,48]}
+{"kind":"textbox","slide":9,"id":"45","role":"table text","text":"AI Assistant","textPreview":"AI Assistant","textChars":12,"textLines":1,"bbox":[94,638,226,26]}
+{"kind":"shape","slide":9,"id":"46","role":"table cell","shapeType":"rect","bbox":[360,628,580,48]}
+{"kind":"textbox","slide":9,"id":"47","role":"table text","text":"Returns recommendation response","textPreview":"Returns recommendation response","textChars":31,"textLines":1,"bbox":[372,638,556,26]}
+{"kind":"shape","slide":9,"id":"48","role":"table cell","shapeType":"rect","bbox":[958,628,170,48]}
+{"kind":"textbox","slide":9,"id":"49","role":"table text","text":"Partial Pass","textPreview":"Partial Pass","textChars":12,"textLines":1,"bbox":[970,638,146,26]}
+{"kind":"image","slide":10,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":10,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":10,"id":"4","role":"header","text":"WEEK 7","textPreview":"WEEK 7","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":10,"id":"5","role":"header","text":"10 / 15","textPreview":"10 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":10,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":10,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":10,"id":"8","role":"title","text":"System Deployment","textPreview":"System Deployment","textChars":17,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":10,"id":"9","role":"subtitle","text":"Deployment moved the project from a local build to a usable online system with live configuration.","textPreview":"Deployment moved the project from a local build to a usable online system with live configuration.","textChars":98,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":10,"id":"10","role":"card panel: Frontend","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":10,"id":"11","role":"card accent: Frontend","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":10,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":10,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":10,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":10,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":10,"id":"16","role":"card label","text":"Frontend","textPreview":"Frontend","textChars":8,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":10,"id":"17","role":"card body: Frontend","text":"The frontend was prepared\nfor deployment with Vercel\nso the interface could be\naccessed outside the\ndevelopment environment.","textPreview":"The frontend was prepared | for deployment with Vercel | so the interface could be | accessed outside the | development environment.","textChars":124,"textLines":5,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":10,"id":"18","role":"card panel: Backend","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":10,"id":"19","role":"card accent: Backend","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":10,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":10,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":10,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":10,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":10,"id":"24","role":"card label","text":"Backend","textPreview":"Backend","textChars":7,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":10,"id":"25","role":"card body: Backend","text":"The backend was prepared for\nRender while Supabase\nremained responsible for\nauthentication and database\nservices.","textPreview":"The backend was prepared for | Render while Supabase | remained responsible for | authentication and database | services.","textChars":113,"textLines":5,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":10,"id":"26","role":"card panel: Challenge","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":10,"id":"27","role":"card accent: Challenge","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":10,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":10,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":10,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":10,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":10,"id":"32","role":"card label","text":"Challenge","textPreview":"Challenge","textChars":9,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":10,"id":"33","role":"card body: Challenge","text":"The main challenge was\nconfiguring environment\nvariables correctly for\nSupabase and Gemini API\nconnections.","textPreview":"The main challenge was | configuring environment | variables correctly for | Supabase and Gemini API | connections.","textChars":107,"textLines":5,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"image","slide":11,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":11,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":11,"id":"4","role":"header","text":"WEEK 9","textPreview":"WEEK 9","textChars":6,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":11,"id":"5","role":"header","text":"11 / 15","textPreview":"11 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":11,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":11,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":11,"id":"8","role":"title","text":"Maintenance and Troubleshooting","textPreview":"Maintenance and Troubleshooting","textChars":31,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":11,"id":"9","role":"subtitle","text":"Post-implementation maintenance improved clarity, reliability, and consistency across the system.","textPreview":"Post-implementation maintenance improved clarity, reliability, and consistency across the system.","textChars":97,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":11,"id":"10","role":"card panel: AI Reliability","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":11,"id":"11","role":"card accent: AI Reliability","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":11,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":11,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":11,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":11,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":11,"id":"16","role":"card label","text":"AI Reliability","textPreview":"AI Reliability","textChars":14,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":11,"id":"17","role":"card body: AI Reliability","text":"Recommendation logic and\nprompt structure were\nrefined so responses became\nmore focused and easier to\nunderstand.","textPreview":"Recommendation logic and | prompt structure were | refined so responses became | more focused and easier to | understand.","textChars":113,"textLines":5,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":11,"id":"18","role":"card panel: User Data","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":11,"id":"19","role":"card accent: User Data","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":11,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":11,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":11,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":11,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":11,"id":"24","role":"card label","text":"User Data","textPreview":"User Data","textChars":9,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":11,"id":"25","role":"card body: User Data","text":"Saved books and recent\nactivity were improved so\nthe system behaved more\nconsistently across Library,\nProfile, and Detail flows.","textPreview":"Saved books and recent | activity were improved so | the system behaved more | consistently across Library, | Profile, and Detail flows.","textChars":128,"textLines":5,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":11,"id":"26","role":"card panel: UI Stability","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":11,"id":"27","role":"card accent: UI Stability","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":11,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":11,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":11,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":11,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":11,"id":"32","role":"card label","text":"UI Stability","textPreview":"UI Stability","textChars":12,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":11,"id":"33","role":"card body: UI Stability","text":"Theme behavior, chat input\nbehavior, and page\nconsistency were adjusted to\ncreate a smoother user\nexperience.","textPreview":"Theme behavior, chat input | behavior, and page | consistency were adjusted to | create a smoother user | experience.","textChars":109,"textLines":5,"bbox":[866.6666666666666,438,307.3333333333333,136]}
+{"kind":"textbox","slide":12,"id":"2","role":"header","text":"WEEK 10","textPreview":"WEEK 10","textChars":7,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":12,"id":"3","role":"header","text":"12 / 15","textPreview":"12 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":12,"id":"4","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":12,"id":"5","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":12,"id":"6","role":"title","text":"Usability Evaluation","textPreview":"Usability Evaluation","textChars":20,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":12,"id":"7","role":"subtitle","text":"Usability testing identified the AI assistant and Book Detail Page as the main areas needing improvement.","textPreview":"Usability testing identified the AI assistant and Book Detail Page as the main areas needing improvement.","textChars":105,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":12,"id":"8","role":"chart panel","shapeType":"roundRect","bbox":[90,334,560,302]}
+{"kind":"textbox","slide":12,"id":"9","role":"chart title","text":"AI Assistant Issues","textPreview":"AI Assistant Issues","textChars":19,"textLines":1,"bbox":[110,354,240,24]}
+{"kind":"shape","slide":12,"id":"10","role":"y axis","shapeType":"rect","bbox":[146,370,2,168]}
+{"kind":"shape","slide":12,"id":"11","role":"x axis","shapeType":"rect","bbox":[146,538,430,2]}
+{"kind":"shape","slide":12,"id":"12","role":"bar","shapeType":"roundRect","bbox":[195,406,64,132]}
+{"kind":"textbox","slide":12,"id":"13","role":"bar value","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[217,382,24,20]}
+{"kind":"textbox","slide":12,"id":"14","role":"bar label","text":"Accuracy","textPreview":"Accuracy","textChars":8,"textLines":1,"bbox":[183,550,90,42]}
+{"kind":"shape","slide":12,"id":"15","role":"bar","shapeType":"roundRect","bbox":[315,472,64,66]}
+{"kind":"textbox","slide":12,"id":"16","role":"bar value","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[337,448,24,20]}
+{"kind":"textbox","slide":12,"id":"17","role":"bar label","text":"Context","textPreview":"Context","textChars":7,"textLines":1,"bbox":[303,550,90,42]}
+{"kind":"shape","slide":12,"id":"18","role":"bar","shapeType":"roundRect","bbox":[435,450,64,88]}
+{"kind":"textbox","slide":12,"id":"19","role":"bar value","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[457,426,24,20]}
+{"kind":"textbox","slide":12,"id":"20","role":"bar label","text":"Response\nTime","textPreview":"Response | Time","textChars":13,"textLines":2,"bbox":[423,550,90,42]}
+{"kind":"shape","slide":12,"id":"21","role":"card panel: Implementation Improvement","shapeType":"roundRect","bbox":[720,354,470,252]}
+{"kind":"shape","slide":12,"id":"22","role":"card accent: Implementation Improvement","shapeType":"rect","bbox":[720,354,8,252]}
+{"kind":"shape","slide":12,"id":"23","role":"icon badge","shapeType":"ellipse","bbox":[742,378,54,54]}
+{"kind":"shape","slide":12,"id":"24","role":"icon glyph","shapeType":"roundRect","bbox":[755,393,26,13]}
+{"kind":"shape","slide":12,"id":"25","role":"icon glyph","shapeType":"roundRect","bbox":[760,402,26,13]}
+{"kind":"shape","slide":12,"id":"26","role":"icon glyph","shapeType":"roundRect","bbox":[765,411,20,10]}
+{"kind":"textbox","slide":12,"id":"27","role":"card label","text":"Implementation Improvement","textPreview":"Implementation Improvement","textChars":26,"textLines":1,"bbox":[808,376,362,28]}
+{"kind":"textbox","slide":12,"id":"28","role":"card body: Implementation Improvement","text":"The feedback led to stronger\nrecommendation ranking, simpler AI\nlanguage, and clearer Book Detail\npresentation after testing.","textPreview":"The feedback led to stronger | recommendation ranking, simpler AI | language, and clearer Book Detail | presentation after testing.","textChars":125,"textLines":4,"bbox":[744,440,422,144]}
+{"kind":"textbox","slide":13,"id":"2","role":"header","text":"WEEK 11","textPreview":"WEEK 11","textChars":7,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":13,"id":"3","role":"header","text":"13 / 15","textPreview":"13 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":13,"id":"4","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":13,"id":"5","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":13,"id":"6","role":"title","text":"Applying User-Centered Design Across Phases","textPreview":"Applying User-Centered Design Across Phases","textChars":43,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":13,"id":"7","role":"subtitle","text":"User-centered design guided the project from early planning through post-test improvement.","textPreview":"User-centered design guided the project from early planning through post-test improvement.","textChars":90,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":13,"id":"8","role":"phase box","shapeType":"roundRect","bbox":[92,360,150,86]}
+{"kind":"textbox","slide":13,"id":"9","role":"phase title","text":"Planning","textPreview":"Planning","textChars":8,"textLines":1,"bbox":[106,374,122,24]}
+{"kind":"textbox","slide":13,"id":"10","role":"phase note","text":"Set direction\nand scope","textPreview":"Set direction | and scope","textChars":23,"textLines":2,"bbox":[106,400,122,40]}
+{"kind":"shape","slide":13,"id":"11","role":"phase connector","shapeType":"rect","bbox":[242,402,35,3]}
+{"kind":"shape","slide":13,"id":"12","role":"phase connector","shapeType":"rect","bbox":[269,442,8,3]}
+{"kind":"shape","slide":13,"id":"13","role":"phase box","shapeType":"roundRect","bbox":[277,470,150,86]}
+{"kind":"textbox","slide":13,"id":"14","role":"phase title","text":"Analysis","textPreview":"Analysis","textChars":8,"textLines":1,"bbox":[291,484,122,24]}
+{"kind":"textbox","slide":13,"id":"15","role":"phase note","text":"Identified user\nneeds","textPreview":"Identified user | needs","textChars":21,"textLines":2,"bbox":[291,510,122,40]}
+{"kind":"shape","slide":13,"id":"16","role":"phase connector","shapeType":"rect","bbox":[427,442,35,3]}
+{"kind":"shape","slide":13,"id":"17","role":"phase connector","shapeType":"rect","bbox":[454,512,8,3]}
+{"kind":"shape","slide":13,"id":"18","role":"phase box","shapeType":"roundRect","bbox":[462,360,150,86]}
+{"kind":"textbox","slide":13,"id":"19","role":"phase title","text":"Design","textPreview":"Design","textChars":6,"textLines":1,"bbox":[476,374,122,24]}
+{"kind":"textbox","slide":13,"id":"20","role":"phase note","text":"Prepared\nstructure and\nwireframes","textPreview":"Prepared | structure and | wireframes","textChars":33,"textLines":3,"bbox":[476,400,122,40]}
+{"kind":"shape","slide":13,"id":"21","role":"phase connector","shapeType":"rect","bbox":[612,402,35,3]}
+{"kind":"shape","slide":13,"id":"22","role":"phase connector","shapeType":"rect","bbox":[639,442,8,3]}
+{"kind":"shape","slide":13,"id":"23","role":"phase box","shapeType":"roundRect","bbox":[647,470,150,86]}
+{"kind":"textbox","slide":13,"id":"24","role":"phase title","text":"Development","textPreview":"Development","textChars":11,"textLines":1,"bbox":[661,484,122,24]}
+{"kind":"textbox","slide":13,"id":"25","role":"phase note","text":"Built the\nworking system","textPreview":"Built the | working system","textChars":24,"textLines":2,"bbox":[661,510,122,40]}
+{"kind":"shape","slide":13,"id":"26","role":"phase connector","shapeType":"rect","bbox":[797,442,35,3]}
+{"kind":"shape","slide":13,"id":"27","role":"phase connector","shapeType":"rect","bbox":[824,512,8,3]}
+{"kind":"shape","slide":13,"id":"28","role":"phase box","shapeType":"roundRect","bbox":[832,360,150,86]}
+{"kind":"textbox","slide":13,"id":"29","role":"phase title","text":"Testing","textPreview":"Testing","textChars":7,"textLines":1,"bbox":[846,374,122,24]}
+{"kind":"textbox","slide":13,"id":"30","role":"phase note","text":"Verified\nfunctionality","textPreview":"Verified | functionality","textChars":22,"textLines":2,"bbox":[846,400,122,40]}
+{"kind":"shape","slide":13,"id":"31","role":"phase connector","shapeType":"rect","bbox":[982,402,35,3]}
+{"kind":"shape","slide":13,"id":"32","role":"phase connector","shapeType":"rect","bbox":[1009,442,8,3]}
+{"kind":"shape","slide":13,"id":"33","role":"phase box","shapeType":"roundRect","bbox":[1017,470,150,86]}
+{"kind":"textbox","slide":13,"id":"34","role":"phase title","text":"Evaluation","textPreview":"Evaluation","textChars":10,"textLines":1,"bbox":[1031,484,122,24]}
+{"kind":"textbox","slide":13,"id":"35","role":"phase note","text":"Guided\nimprovements","textPreview":"Guided | improvements","textChars":19,"textLines":2,"bbox":[1031,510,122,40]}
+{"kind":"textbox","slide":14,"id":"2","role":"header","text":"WEEK 12","textPreview":"WEEK 12","textChars":7,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":14,"id":"3","role":"header","text":"14 / 15","textPreview":"14 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":14,"id":"4","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":14,"id":"5","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":14,"id":"6","role":"title","text":"Project Management Information System","textPreview":"Project Management Information System","textChars":37,"textLines":1,"bbox":[64,86,780,142]}
+{"kind":"textbox","slide":14,"id":"7","role":"subtitle","text":"The project was managed through the course-week structure, which supported steady implementation progress.","textPreview":"The project was managed through the course-week structure, which supported steady implementation progress.","textChars":106,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":14,"id":"8","role":"timeline line","shapeType":"rect","bbox":[110,430,1060,4]}
+{"kind":"shape","slide":14,"id":"9","role":"timeline node","shapeType":"ellipse","bbox":[130,416,28,28]}
+{"kind":"textbox","slide":14,"id":"10","role":"timeline week","text":"W1-2","textPreview":"W1-2","textChars":4,"textLines":1,"bbox":[122,368,70,24]}
+{"kind":"textbox","slide":14,"id":"11","role":"timeline label","text":"Plan","textPreview":"Plan","textChars":4,"textLines":1,"bbox":[100,458,115,48]}
+{"kind":"textbox","slide":14,"id":"12","role":"timeline note","text":"Defined scope\nand selected\ntechnology.","textPreview":"Defined scope | and selected | technology.","textChars":38,"textLines":3,"bbox":[100,506,150,110]}
+{"kind":"shape","slide":14,"id":"13","role":"timeline node","shapeType":"ellipse","bbox":[350,416,28,28]}
+{"kind":"textbox","slide":14,"id":"14","role":"timeline week","text":"W3-4","textPreview":"W3-4","textChars":4,"textLines":1,"bbox":[342,368,70,24]}
+{"kind":"textbox","slide":14,"id":"15","role":"timeline label","text":"Analyze & Design","textPreview":"Analyze & Design","textChars":16,"textLines":1,"bbox":[320,458,115,48]}
+{"kind":"textbox","slide":14,"id":"16","role":"timeline note","text":"Prepared\nrequirements and\ndesign outputs.","textPreview":"Prepared | requirements and | design outputs.","textChars":41,"textLines":3,"bbox":[320,506,150,110]}
+{"kind":"shape","slide":14,"id":"17","role":"timeline node","shapeType":"ellipse","bbox":[570,416,28,28]}
+{"kind":"textbox","slide":14,"id":"18","role":"timeline week","text":"W5-7","textPreview":"W5-7","textChars":4,"textLines":1,"bbox":[562,368,70,24]}
+{"kind":"textbox","slide":14,"id":"19","role":"timeline label","text":"Develop & Deploy","textPreview":"Develop & Deploy","textChars":16,"textLines":1,"bbox":[540,458,115,48]}
+{"kind":"textbox","slide":14,"id":"20","role":"timeline note","text":"Built features\nand configured\nthe live system.","textPreview":"Built features | and configured | the live system.","textChars":46,"textLines":3,"bbox":[540,506,150,110]}
+{"kind":"shape","slide":14,"id":"21","role":"timeline node","shapeType":"ellipse","bbox":[790,416,28,28]}
+{"kind":"textbox","slide":14,"id":"22","role":"timeline week","text":"W9-10","textPreview":"W9-10","textChars":5,"textLines":1,"bbox":[782,368,70,24]}
+{"kind":"textbox","slide":14,"id":"23","role":"timeline label","text":"Maintain & Evaluate","textPreview":"Maintain & Evaluate","textChars":19,"textLines":1,"bbox":[760,458,115,48]}
+{"kind":"textbox","slide":14,"id":"24","role":"timeline note","text":"Resolved issues\nand used\nusability\nfeedback.","textPreview":"Resolved issues | and used | usability | feedback.","textChars":44,"textLines":4,"bbox":[760,506,150,110]}
+{"kind":"shape","slide":14,"id":"25","role":"timeline node","shapeType":"ellipse","bbox":[1010,416,28,28]}
+{"kind":"textbox","slide":14,"id":"26","role":"timeline week","text":"W11-12","textPreview":"W11-12","textChars":6,"textLines":1,"bbox":[1002,368,70,24]}
+{"kind":"textbox","slide":14,"id":"27","role":"timeline label","text":"Reflect","textPreview":"Reflect","textChars":7,"textLines":1,"bbox":[980,458,115,48]}
+{"kind":"textbox","slide":14,"id":"28","role":"timeline note","text":"Applied UCD\nlessons and\nproject-management\nreview.","textPreview":"Applied UCD | lessons and | project-management | review.","textChars":50,"textLines":4,"bbox":[980,506,150,110]}
+{"kind":"image","slide":15,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":15,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":15,"id":"4","role":"header","text":"FINAL","textPreview":"FINAL","textChars":5,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":15,"id":"5","role":"header","text":"15 / 15","textPreview":"15 / 15","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":15,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":15,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":15,"id":"8","role":"title","text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":15,"id":"9","role":"subtitle","text":"The final system demonstrates how user-centered implementation can make a digital library more useful and more understandable.","textPreview":"The final system demonstrates how user-centered implementation can make a digital library more useful and more understandable.","textChars":126,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":15,"id":"10","role":"card panel: Outcome","shapeType":"roundRect","bbox":[84,352,355.3333333333333,244]}
+{"kind":"shape","slide":15,"id":"11","role":"card accent: Outcome","shapeType":"rect","bbox":[84,352,8,244]}
+{"kind":"shape","slide":15,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,376,54,54]}
+{"kind":"shape","slide":15,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,405,6,12]}
+{"kind":"shape","slide":15,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,397,6,20]}
+{"kind":"shape","slide":15,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,390,6,27]}
+{"kind":"textbox","slide":15,"id":"16","role":"card label","text":"Outcome","textPreview":"Outcome","textChars":7,"textLines":1,"bbox":[172,374,247.33333333333331,28]}
+{"kind":"textbox","slide":15,"id":"17","role":"card body: Outcome","text":"The AI Library App\nsuccessfully combined\nlibrary browsing, detailed\nbook information, saved\nfeatures, and AI-assisted\nrecommendations.","textPreview":"The AI Library App | successfully combined | library browsing, detailed | book information, saved | features, and AI-assisted | recommendations.","textChars":134,"textLines":6,"bbox":[108,438,307.3333333333333,136]}
+{"kind":"shape","slide":15,"id":"18","role":"card panel: Impact","shapeType":"roundRect","bbox":[463.3333333333333,352,355.3333333333333,244]}
+{"kind":"shape","slide":15,"id":"19","role":"card accent: Impact","shapeType":"rect","bbox":[463.3333333333333,352,8,244]}
+{"kind":"shape","slide":15,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,376,54,54]}
+{"kind":"shape","slide":15,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,394,10,10]}
+{"kind":"shape","slide":15,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,403,10,10]}
+{"kind":"shape","slide":15,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,401,19,3]}
+{"kind":"textbox","slide":15,"id":"24","role":"card label","text":"Impact","textPreview":"Impact","textChars":6,"textLines":1,"bbox":[551.3333333333333,374,247.33333333333331,28]}
+{"kind":"textbox","slide":15,"id":"25","role":"card body: Impact","text":"Usability-based improvements\nmade the system clearer,\nmore connected, and more\npractical for real users.","textPreview":"Usability-based improvements | made the system clearer, | more connected, and more | practical for real users.","textChars":104,"textLines":4,"bbox":[487.3333333333333,438,307.3333333333333,136]}
+{"kind":"shape","slide":15,"id":"26","role":"card panel: Future Work","shapeType":"roundRect","bbox":[842.6666666666666,352,355.3333333333333,244]}
+{"kind":"shape","slide":15,"id":"27","role":"card accent: Future Work","shapeType":"rect","bbox":[842.6666666666666,352,8,244]}
+{"kind":"shape","slide":15,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,376,54,54]}
+{"kind":"shape","slide":15,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,391,26,13]}
+{"kind":"shape","slide":15,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,400,26,13]}
+{"kind":"shape","slide":15,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,409,20,10]}
+{"kind":"textbox","slide":15,"id":"32","role":"card label","text":"Future Work","textPreview":"Future Work","textChars":11,"textLines":1,"bbox":[930.6666666666666,374,247.33333333333331,28]}
+{"kind":"textbox","slide":15,"id":"33","role":"card body: Future Work","text":"Future development can focus\non stronger AI\nrecommendation quality,\nPDF-based book\nunderstanding, and further\nusability refinement.","textPreview":"Future development can focus | on stronger AI | recommendation quality, | PDF-based book | understanding, and further | usability refinement.","textChars":131,"textLines":6,"bbox":[866.6666666666666,438,307.3333333333333,136]}

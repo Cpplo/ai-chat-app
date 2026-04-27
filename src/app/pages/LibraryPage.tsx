@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Search, Filter, Download, BookOpen, FileText } from "lucide-react";
+import { Search, Filter, Download, BookOpen, FileText, Heart } from "lucide-react";
+import { useNavigate, useSearchParams } from "react-router";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
@@ -7,19 +8,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Badge } from "../components/ui/badge";
 import { toast } from "sonner";
 import { formatFileSize, mapBookRecordToLibraryBook, type BookRecord } from "../lib/books";
+import { getSavedBookIds, recordRecentActivity, toggleSavedBook } from "../lib/personalization";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../providers/AuthProvider";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function LibraryPage() {
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [books, setBooks] = useState<BookRecord[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("q") ?? "");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("title");
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [loadHint, setLoadHint] = useState<string | null>(null);
+  const [savedBookIds, setSavedBookIds] = useState<string[]>([]);
 
   useEffect(() => {
     const loadBooks = async () => {
@@ -56,10 +61,28 @@ export function LibraryPage() {
     void loadBooks();
   }, [user]);
 
+  useEffect(() => {
+    const nextQuery = searchParams.get("q") ?? "";
+    setSearchQuery(nextQuery);
+  }, [searchParams]);
+
   const libraryBooks = useMemo(
     () => books.map(mapBookRecordToLibraryBook),
     [books],
   );
+
+  useEffect(() => {
+    const loadSavedBookIds = async () => {
+      if (!user) {
+        setSavedBookIds([]);
+        return;
+      }
+
+      setSavedBookIds(await getSavedBookIds(user.id));
+    };
+
+    void loadSavedBookIds();
+  }, [libraryBooks, user]);
 
   const categories = useMemo(() => {
     const uniqueCategories = new Set(
@@ -88,10 +111,14 @@ export function LibraryPage() {
       });
   }, [libraryBooks, searchQuery, selectedCategory, sortBy]);
 
-  const handleOpenBook = (book: (typeof filteredBooks)[number]) => {
+  const handleOpenBook = async (book: (typeof filteredBooks)[number]) => {
+    if (user) {
+      await recordRecentActivity(user.id, book, book.hasFile ? "opened" : "viewed");
+    }
+
     if (!book.hasFile || !book.downloadUrl) {
-      toast.message(`"${book.title}" is currently catalog-only.`, {
-        description: "This book record is available for browsing, but no file has been attached yet.",
+      toast.message(`"${book.title}" is available as a catalog record.`, {
+        description: "This title can be viewed in the catalog, but no file is attached yet.",
       });
       return;
     }
@@ -99,12 +126,26 @@ export function LibraryPage() {
     window.open(book.downloadUrl, "_blank", "noopener,noreferrer");
   };
 
+  const handleToggleSaved = async (book: (typeof filteredBooks)[number]) => {
+    if (!user) {
+      toast.error("Sign in to save books to your profile.");
+      return;
+    }
+
+    const result = await toggleSavedBook(user.id, book);
+    setSavedBookIds(result.savedBooks.map((entry) => entry.id));
+
+    await recordRecentActivity(user.id, book, result.saved ? "saved" : "removed");
+
+    toast.success(result.saved ? `"${book.title}" saved to your profile.` : `"${book.title}" removed from saved books.`);
+  };
+
   return (
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Digital Library</h2>
-        <p className="text-gray-600 mt-1">Browse real catalog records from your library database</p>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50">Digital Library</h2>
+        <p className="mt-1 text-slate-600 dark:text-slate-400">Browse books available in your library collection</p>
       </div>
 
       {/* Search and Filters */}
@@ -113,11 +154,23 @@ export function LibraryPage() {
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search Bar */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+              <Search className="absolute left-3 top-3 w-4 h-4 text-slate-400 dark:text-slate-500" />
               <Input
                 placeholder="Search by title or author..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  const nextValue = e.target.value;
+                  setSearchQuery(nextValue);
+
+                  const nextParams = new URLSearchParams(searchParams);
+                  if (nextValue.trim()) {
+                    nextParams.set("q", nextValue);
+                  } else {
+                    nextParams.delete("q");
+                  }
+
+                  setSearchParams(nextParams, { replace: true });
+                }}
                 className="pl-10"
               />
             </div>
@@ -153,26 +206,26 @@ export function LibraryPage() {
       </Card>
 
       {errorMessage && (
-        <Card className="border-red-200 bg-red-50">
+        <Card className="border-red-200 bg-red-50 dark:border-red-950/70 dark:bg-red-950/20">
           <CardContent className="pt-6">
-            <p className="text-sm font-medium text-red-900">Could not load books</p>
-            <p className="mt-1 text-sm text-red-700">{errorMessage}</p>
+            <p className="text-sm font-medium text-red-900 dark:text-red-200">Could not load books</p>
+            <p className="mt-1 text-sm text-red-700 dark:text-red-300">{errorMessage}</p>
           </CardContent>
         </Card>
       )}
 
       {!errorMessage && loadHint && (
-        <Card className="border-amber-200 bg-amber-50">
+        <Card className="border-amber-200 bg-amber-50 dark:border-amber-950/70 dark:bg-amber-950/20">
           <CardContent className="pt-6">
-            <p className="text-sm font-medium text-amber-900">Books are not visible yet</p>
-            <p className="mt-1 text-sm text-amber-800">{loadHint}</p>
+            <p className="text-sm font-medium text-amber-900 dark:text-amber-200">Books are not visible yet</p>
+            <p className="mt-1 text-sm text-amber-800 dark:text-amber-300">{loadHint}</p>
           </CardContent>
         </Card>
       )}
 
       {/* Results Count */}
       <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-slate-600 dark:text-slate-400">
           {isLoading ? (
             <>Loading books...</>
           ) : (
@@ -189,12 +242,12 @@ export function LibraryPage() {
           Array.from({ length: 6 }).map((_, index) => (
             <Card key={index} className="animate-pulse">
               <CardHeader>
-                <div className="h-5 w-24 rounded bg-gray-200" />
-                <div className="h-6 w-full rounded bg-gray-200" />
-                <div className="h-4 w-32 rounded bg-gray-200" />
+                <div className="h-5 w-24 rounded bg-slate-200 dark:bg-slate-600" />
+                <div className="h-6 w-full rounded bg-slate-200 dark:bg-slate-600" />
+                <div className="h-4 w-32 rounded bg-slate-200 dark:bg-slate-600" />
               </CardHeader>
               <CardContent>
-                <div className="h-20 rounded bg-gray-100" />
+                <div className="h-20 rounded bg-slate-100 dark:bg-slate-700" />
               </CardContent>
             </Card>
           ))}
@@ -214,7 +267,7 @@ export function LibraryPage() {
               <CardDescription>{book.author}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="mb-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+              <div className="mb-4 overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-600 dark:bg-slate-700/40">
                 {book.coverUrl ? (
                   <ImageWithFallback
                     src={book.coverUrl}
@@ -222,25 +275,36 @@ export function LibraryPage() {
                     className="h-48 w-full object-cover"
                   />
                 ) : (
-                  <div className="flex h-48 items-center justify-center bg-gray-100 text-sm text-gray-500">
-                    No cover image
+                  <div className="flex h-48 items-center justify-center bg-slate-100 text-sm text-slate-500 dark:bg-slate-700 dark:text-slate-300">
+                    Cover unavailable
                   </div>
                 )}
               </div>
-              <p className="text-sm text-gray-600 line-clamp-3 mb-4">{book.description}</p>
-              <div className="flex items-center justify-between text-xs text-gray-500">
+              <p className="mb-4 line-clamp-3 text-sm text-slate-600 dark:text-slate-400">{book.description}</p>
+              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                 <span>Year: {book.year ?? "Unknown"}</span>
                 <span className="capitalize">{book.source.replace("_", " ")}</span>
               </div>
-              <div className="flex items-center justify-between text-xs text-gray-500 mt-2">
+              <div className="mt-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                 <span>{formatFileSize(book.fileSizeBytes)}</span>
                 <span>{book.fileFormat ?? "Catalog"}</span>
               </div>
             </CardContent>
-            <CardFooter>
-              <Button onClick={() => handleOpenBook(book)} className="w-full gap-2">
+            <CardFooter className="flex gap-2">
+              <Button
+                variant={savedBookIds.includes(book.id) ? "default" : "outline"}
+                onClick={() => void handleToggleSaved(book)}
+                className="gap-2"
+              >
+                <Heart className="w-4 h-4" />
+                {savedBookIds.includes(book.id) ? "Saved" : "Save"}
+              </Button>
+              <Button onClick={() => void handleOpenBook(book)} className="flex-1 gap-2">
                 {book.hasFile ? <Download className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
                 {book.hasFile ? "Open File" : "View Record"}
+              </Button>
+              <Button variant="ghost" onClick={() => navigate(`/books/${book.id}`)}>
+                Details
               </Button>
             </CardFooter>
           </Card>
@@ -250,9 +314,9 @@ export function LibraryPage() {
       {/* Empty State */}
       {!isLoading && filteredBooks.length === 0 && (
         <div className="text-center py-12">
-          <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No books found</h3>
-          <p className="text-gray-600">
+          <BookOpen className="mx-auto mb-4 w-16 h-16 text-slate-300 dark:text-slate-700" />
+          <h3 className="mb-2 text-lg font-medium text-slate-900 dark:text-slate-50">No books found</h3>
+          <p className="text-slate-600 dark:text-slate-400">
             {libraryBooks.length === 0
               ? loadHint ?? "Run the books migration and seed scripts in Supabase, then refresh this page."
               : "Try adjusting your search or filter criteria."}

@@ -1,0 +1,166 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAFF"/>
+      <stop offset="1" stop-color="#EEF3FF"/>
+    </linearGradient>
+    <linearGradient id="centerCard" x1="640" y1="220" x2="960" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F5FD0"/>
+      <stop offset="1" stop-color="#24489F"/>
+    </linearGradient>
+    <filter id="shadow" x="110" y="150" width="1380" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#203A7A" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M0 0L16 8L0 16V0Z" fill="#2F5FD0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="800" y="110" text-anchor="middle" fill="#1A2A4A" font-family="Aptos, Arial, sans-serif" font-size="56" font-weight="700">
+    Hybrid Approach
+  </text>
+  <text x="800" y="160" text-anchor="middle" fill="#566B92" font-family="Aptos, Arial, sans-serif" font-size="24">
+    Combines strategic planning with practical technical planning
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="150" y="220" rx="34" ry="34" width="390" height="460" fill="white" stroke="#BFD0F7" stroke-width="2"/>
+    <rect x="605" y="190" rx="42" ry="42" width="390" height="520" fill="url(#centerCard)"/>
+    <rect x="1060" y="220" rx="34" ry="34" width="390" height="460" fill="white" stroke="#BFD0F7" stroke-width="2"/>
+  </g>
+
+  <line x1="540" y1="450" x2="605" y2="450" stroke="#2F5FD0" stroke-width="8" marker-end="url(#arrowBlue)"/>
+  <line x1="995" y1="450" x2="1060" y2="450" stroke="#2F5FD0" stroke-width="8" marker-end="url(#arrowBlue)"/>
+
+  <circle cx="250" cy="300" r="38" fill="#ECF2FF"/>
+  <path d="M232 320V290H244V320H232ZM250 320V274H262V320H250ZM268 320V282H280V320H268Z" fill="#2F5FD0"/>
+  <text x="345" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">
+    Strategic Planning
+  </text>
+
+  <circle cx="1255" cy="300" r="38" fill="#FFF2DE"/>
+  <rect x="1234" y="292" width="20" height="28" rx="4" fill="#F4B85E"/>
+  <rect x="1258" y="278" width="20" height="42" rx="4" fill="#2F5FD0"/>
+  <rect x="1282" y="286" width="20" height="34" rx="4" fill="#9B7AE6"/>
+  <text x="1255" y="302" fill="#6F4B0C" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" opacity="0">
+    .
+  </text>
+  <text x="1255" y="302" fill="#1F3768" font-family="Aptos, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">
+    Technical Planning
+  </text>
+
+  <text x="800" y="300" fill="white" font-family="Aptos, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">
+    Hybrid
+  </text>
+  <text x="800" y="350" fill="white" font-family="Aptos, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">
+    Approach
+  </text>
+  <text x="800" y="420" fill="#DCE7FF" font-family="Aptos, Arial, sans-serif" font-size="24" text-anchor="middle">
+    Balances vision with implementation
+  </text>
+
+  <g fill="#375A9F" font-family="Aptos, Arial, sans-serif" font-size="25">
+    <circle cx="210" cy="390" r="6" fill="#2F5FD0"/>
+    <text x="230" y="398">User needs</text>
+    <circle cx="210" cy="458" r="6" fill="#2F5FD0"/>
+    <text x="230" y="466">Project objective</text>
+    <circle cx="210" cy="526" r="6" fill="#2F5FD0"/>
+    <text x="230" y="534">System purpose</text>
+    <circle cx="210" cy="594" r="6" fill="#2F5FD0"/>
+    <text x="230" y="602">Strategic alignment</text>
+  </g>
+
+  <g fill="#375A9F" font-family="Aptos, Arial, sans-serif" font-size="25">
+    <circle cx="1120" cy="390" r="6" fill="#F4B85E"/>
+    <text x="1140" y="398">Feature selection</text>
+    <circle cx="1120" cy="458" r="6" fill="#F4B85E"/>
+    <text x="1140" y="466">Technology choice</text>
+    <circle cx="1120" cy="526" r="6" fill="#F4B85E"/>
+    <text x="1140" y="534">Timeline and stages</text>
+    <circle cx="1120" cy="594" r="6" fill="#F4B85E"/>
+    <text x="1140" y="602">Implementation feasibility</text>
+  </g>
+
+  <g fill="white" font-family="Aptos, Arial, sans-serif" font-size="24" text-anchor="middle">
+    <circle cx="800" cy="500" r="7" fill="#FFFFFF"/>
+    <text x="800" y="550">Connects user-centered goals with</text>
+    <text x="800" y="585">realistic development decisions</text>
+  </g>
+</svg>

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router";
 import { Send, Bot, User, Sparkles, BookOpen, Search, Download } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
@@ -12,6 +13,16 @@ interface Message {
   type: "user" | "ai";
   content: string;
   timestamp: Date;
+  matchedBooks?: MatchedBook[];
+}
+
+interface MatchedBook {
+  id: string;
+  title: string;
+  author: string;
+  category?: string | null;
+  coverUrl?: string | null;
+  hasFile?: boolean;
 }
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
@@ -23,6 +34,7 @@ const quickActions = [
 ];
 
 export function ChatPage() {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -33,11 +45,22 @@ export function ChatPage() {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
   const responseTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    const viewport = scrollAreaRef.current?.querySelector(
+      "[data-slot='scroll-area-viewport']",
+    ) as HTMLDivElement | null;
+
+    if (!viewport) {
+      return;
+    }
+
+    viewport.scrollTo({
+      top: viewport.scrollHeight,
+      behavior: "smooth",
+    });
   }, [messages, isTyping]);
 
   useEffect(() => {
@@ -89,6 +112,7 @@ export function ChatPage() {
         type: "ai",
         content: payload.reply,
         timestamp: new Date(),
+        matchedBooks: Array.isArray(payload.matchedBooks) ? payload.matchedBooks : [],
       };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
@@ -99,7 +123,7 @@ export function ChatPage() {
         id: crypto.randomUUID(),
         type: "ai",
         content:
-          "I couldn't reach the live library assistant just now. Check that the backend is running and the Gemini API is configured.",
+          "The library assistant is currently unavailable. Please check that the backend service is running and configured correctly.",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, fallbackMessage]);
@@ -126,20 +150,20 @@ export function ChatPage() {
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">AI Assistant</h2>
-            <p className="text-gray-600">Ask questions and get personalized recommendations</p>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50">AI Assistant</h2>
+            <p className="text-slate-600 dark:text-slate-400">Ask questions and receive book recommendations</p>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* Chat Area */}
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2 flex h-[70vh] min-h-[520px] flex-col sm:h-[75vh] lg:h-[calc(100vh-13rem)] lg:min-h-[620px]">
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle>Chat with AI</CardTitle>
-                <CardDescription>Get grounded answers from Gemini using your real library catalog</CardDescription>
+                <CardDescription>Ask about topics, availability, and recommendations from your library catalog</CardDescription>
               </div>
               <Badge variant="secondary" className="gap-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -147,9 +171,9 @@ export function ChatPage() {
               </Badge>
             </div>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="flex min-h-0 flex-1 flex-col space-y-4">
             {/* Messages */}
-            <ScrollArea className="h-[500px] pr-4">
+            <ScrollArea ref={scrollAreaRef} className="min-h-0 flex-1 pr-4">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <div
@@ -162,16 +186,54 @@ export function ChatPage() {
                       </div>
                     )}
                     <div
-                      className={`max-w-[80%] rounded-lg p-4 ${
+                      className={`max-w-[88%] rounded-lg p-3 sm:max-w-[80%] sm:p-4 ${
                         message.type === "user"
                           ? "bg-indigo-600 text-white"
-                          : "bg-gray-100 text-gray-900"
+                          : "bg-slate-100 text-slate-900 dark:bg-slate-700/70 dark:text-slate-100"
                       }`}
                     >
                       <p className="text-sm whitespace-pre-line">{message.content}</p>
+                      {message.type === "ai" && message.matchedBooks && message.matchedBooks.length > 0 && (
+                        <div className="mt-4 rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-600 dark:bg-slate-700/70">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                            Catalog matches
+                          </p>
+                          <div className="mt-3 space-y-3">
+                            {message.matchedBooks.slice(0, 4).map((book, index) => (
+                              <div
+                                key={book.id}
+                                className={`rounded-md border px-3 py-3 ${
+                                  index === 0
+                                    ? "border-indigo-200 bg-indigo-50"
+                                    : "border-slate-200 bg-slate-50 dark:border-slate-600 dark:bg-slate-700/60"
+                                }`}
+                              >
+                                {index === 0 && (
+                                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-indigo-700">
+                                    Best match
+                                  </p>
+                                )}
+                                <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{book.title}</p>
+                                <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                                  {book.author}
+                                  {book.category ? ` - ${book.category}` : ""}
+                                  {book.hasFile ? " - File available" : ""}
+                                </p>
+                                <Button
+                                  variant="link"
+                                  className="mt-2 h-auto p-0 text-indigo-600"
+                                  onClick={() => navigate(`/books/${book.id}`)}
+                                >
+                                  Open details
+                                </Button>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       <p
                         className={`text-xs mt-2 ${
-                          message.type === "user" ? "text-indigo-200" : "text-gray-500"
+                          message.type === "user" ? "text-indigo-200" : "text-slate-500 dark:text-slate-400"
                         }`}
                       >
                         {message.timestamp.toLocaleTimeString([], {
@@ -194,48 +256,50 @@ export function ChatPage() {
                     <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-2 rounded-lg h-fit">
                       <Bot className="w-5 h-5 text-white" />
                     </div>
-                    <div className="bg-gray-100 rounded-lg p-4">
+                    <div className="rounded-lg bg-slate-100 p-4 dark:bg-slate-700/70">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                       </div>
                     </div>
                   </div>
                 )}
-                <div ref={messagesEndRef} />
               </div>
             </ScrollArea>
 
             {/* Input */}
-            <form onSubmit={handleSubmit} className="flex gap-2">
-              <Input
-                placeholder="Ask me anything about the library..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                disabled={isTyping}
-              />
-              <Button type="submit" disabled={isTyping || !inputValue.trim()} className="gap-2">
-                <Send className="w-4 h-4" />
-                Send
-              </Button>
-            </form>
+            <div className="border-t border-slate-200 bg-white pt-3 dark:border-slate-600 dark:bg-transparent sm:pt-4">
+              <form onSubmit={handleSubmit} className="flex gap-2 sm:gap-3">
+                <Input
+                  placeholder="Ask me anything about the library..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  disabled={isTyping}
+                  className="h-11 sm:h-10"
+                />
+                <Button type="submit" disabled={isTyping || !inputValue.trim()} className="gap-2 px-4 sm:px-4">
+                  <Send className="w-4 h-4" />
+                  <span className="hidden sm:inline">Send</span>
+                </Button>
+              </form>
+            </div>
           </CardContent>
         </Card>
 
         {/* Quick Actions */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:space-y-4">
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">Quick Actions</CardTitle>
-              <CardDescription>Try these common questions</CardDescription>
+              <CardDescription className="text-sm">Try a few common questions</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
               {quickActions.map((action, index) => (
                 <Button
                   key={index}
                   variant="outline"
-                  className="w-full justify-start gap-3 h-auto py-3"
+                  className="w-full justify-start gap-3 h-auto py-2.5 sm:py-3"
                   onClick={() => handleQuickAction(action.query)}
                   disabled={isTyping}
                 >
@@ -251,10 +315,10 @@ export function ChatPage() {
               <CardTitle className="text-lg">AI Capabilities</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-1.5" />
-                  <span>Recommend books from your Supabase catalog</span>
+                  <span>Recommend books from your library collection</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-1.5" />
@@ -262,11 +326,11 @@ export function ChatPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-1.5" />
-                  <span>Ground responses in real book metadata</span>
+                  <span>Use real book information from your collection</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-1.5" />
-                  <span>Fall back gracefully when the catalog has weak matches</span>
+                  <span>Show the catalog titles used in each answer</span>
                 </li>
               </ul>
             </CardContent>

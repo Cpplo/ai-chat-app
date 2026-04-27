@@ -77,14 +77,14 @@ export function AuthCallbackPage() {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-slate-50 px-4 dark:bg-slate-800 flex items-center justify-center">
       <div className="text-center space-y-4">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-indigo-100">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-950/60">
           <LoaderCircle className="h-7 w-7 animate-spin text-indigo-600" />
         </div>
         <div>
-          <h1 className="text-xl font-semibold text-gray-900">Completing sign-in</h1>
-          <p className="mt-1 text-sm text-gray-600">Finalizing your Supabase session and redirecting you.</p>
+          <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-50">Completing sign-in</h1>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">Finalizing your Supabase session and redirecting you.</p>
         </div>
       </div>
     </div>

@@ -45,9 +45,9 @@ export function ResetPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.18),_transparent_38%),linear-gradient(160deg,#f4f7ff_0%,#ffffff_46%,#eff9f6_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.2),_transparent_35%),linear-gradient(160deg,#0f172a_0%,#111827_48%,#0f172a_100%)] flex items-center justify-center px-4 py-10 transition-colors">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.18),_transparent_38%),linear-gradient(160deg,#f4f7ff_0%,#ffffff_46%,#eff9f6_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(129,140,248,0.16),_transparent_35%),linear-gradient(160deg,#334155_0%,#1e293b_55%,#334155_100%)] flex items-center justify-center px-4 py-10 transition-colors">
       <div className="w-full max-w-md">
-        <Card className="border-white/60 bg-white/90 shadow-2xl shadow-slate-300/40 backdrop-blur dark:border-slate-700/60 dark:bg-slate-900/85 dark:shadow-black/30">
+        <Card className="border-white/60 bg-white/90 shadow-2xl shadow-slate-300/40 backdrop-blur dark:border-slate-600/60 dark:bg-slate-700/75 dark:shadow-black/15">
           <CardHeader className="space-y-3">
             <Button
               type="button"
@@ -79,7 +79,7 @@ export function ResetPasswordPage() {
                     type="password"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
-                    className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                    className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                     placeholder="At least 8 characters"
                     disabled={isSubmitting}
                   />
@@ -95,7 +95,7 @@ export function ResetPasswordPage() {
                     type="password"
                     value={confirmPassword}
                     onChange={(event) => setConfirmPassword(event.target.value)}
-                    className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                    className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                     placeholder="Repeat your new password"
                     disabled={isSubmitting}
                   />

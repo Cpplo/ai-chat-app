@@ -4,6 +4,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { ChatPage } from "./pages/ChatPage";
 import { ProfilePage } from "./pages/ProfilePage";
+import { BookDetailPage } from "./pages/BookDetailPage";
 import { AuthCallbackPage } from "./pages/AuthCallbackPage";
 import { ResetPasswordPage } from "./pages/ResetPasswordPage";
 import { NotFound } from "./pages/NotFound";
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
     Component: DashboardLayout,
     children: [
       { index: true, Component: LibraryPage },
+      { path: "books/:bookId", Component: BookDetailPage },
       { path: "chat", Component: ChatPage },
       { path: "profile", Component: ProfilePage },
     ],

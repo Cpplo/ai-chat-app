@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { Outlet, Link, useNavigate, useLocation } from "react-router";
-import { BookOpen, MessageSquare, User, LogOut, Menu, X } from "lucide-react";
+import { BookOpen, MessageSquare, User, LogOut, Menu, MoonStar, SunMedium, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 import { useAuth } from "../providers/AuthProvider";
+import { useTheme } from "../providers/ThemeProvider";
 
 export function DashboardLayout() {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isLoading, clearUser } = useAuth();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -21,9 +22,6 @@ export function DashboardLayout() {
     await clearUser();
     navigate("/login");
   };
-
-  const systemVersion = "v0.9"; // System Testing phase
-  const versionPhase = "System Testing";
 
   if (isLoading) {
     return null;
@@ -40,23 +38,18 @@ export function DashboardLayout() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50 text-slate-950 transition-colors dark:bg-slate-800 dark:text-slate-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-600/80 dark:bg-slate-800/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo and Version */}
+            {/* Logo */}
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-8 h-8 text-indigo-600" />
                 <div>
-                  <h1 className="font-bold text-gray-900">AI Library</h1>
-                  <div className="flex items-center gap-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {systemVersion}
-                    </Badge>
-                    <span className="text-xs text-gray-500">{versionPhase}</span>
-                  </div>
+                  <h1 className="font-bold text-slate-900 dark:text-slate-50">AI Library</h1>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Discover books and get grounded recommendations</p>
                 </div>
               </div>
             </div>
@@ -78,8 +71,12 @@ export function DashboardLayout() {
             </nav>
 
             {/* User Menu */}
-            <div className="hidden md:flex items-center gap-4">
-              <span className="text-sm text-gray-600">Welcome, {user.name}</span>
+            <div className="hidden md:flex items-center gap-3">
+              <Button variant="outline" size="sm" className="gap-2" onClick={toggleTheme}>
+                {isDarkMode ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
+                {isDarkMode ? "Light" : "Dark"}
+              </Button>
+              <span className="text-sm text-slate-600 dark:text-slate-300">Welcome, {user.name}</span>
               <Button variant="ghost" size="sm" onClick={handleLogout} className="gap-2">
                 <LogOut className="w-4 h-4" />
                 Logout
@@ -99,8 +96,17 @@ export function DashboardLayout() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="border-t border-slate-200 py-4 dark:border-slate-600/80 md:hidden">
               <nav className="flex flex-col gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={toggleTheme}
+                  className="w-full justify-start gap-2"
+                >
+                  {isDarkMode ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
+                  {isDarkMode ? "Light mode" : "Dark mode"}
+                </Button>
                 {navItems.map((item) => (
                   <Link key={item.path} to={item.path} onClick={() => setMobileMenuOpen(false)}>
                     <Button
@@ -134,17 +140,13 @@ export function DashboardLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-12">
+      <footer className="mt-12 border-t border-slate-200 bg-white dark:border-slate-600/80 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-500">
-              Copyright 2026 AI Library System. All rights reserved.
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              Copyright 2026 AI Library. All rights reserved.
             </p>
-            <div className="flex items-center gap-2">
-              <Badge variant="outline" className="text-xs">
-                {systemVersion} - {versionPhase}
-              </Badge>
-            </div>
+            <p className="text-sm text-slate-500 dark:text-slate-400">Browse your catalog, save books, and explore with AI.</p>
           </div>
         </div>
       </footer>

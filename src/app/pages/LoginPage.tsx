@@ -13,16 +13,15 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
 import { toast } from "sonner";
 import {
   login,
   requestPasswordReset,
-  resendVerificationEmail,
   signup,
   startGoogleLogin,
 } from "../lib/auth";
 import { useAuth } from "../providers/AuthProvider";
+import { useTheme } from "../providers/ThemeProvider";
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -34,19 +33,7 @@ export function LoginPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const storedTheme = window.localStorage.getItem("ai-library-theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldUseDark = storedTheme ? storedTheme === "dark" : prefersDark;
-    setIsDarkMode(shouldUseDark);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    window.localStorage.setItem("ai-library-theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (!authLoading && user) {
@@ -141,21 +128,6 @@ export function LoginPage() {
     }
   };
 
-  const handleResendVerification = async () => {
-    if (!email) {
-      toast.error("Enter your email first");
-      return;
-    }
-
-    try {
-      const result = await resendVerificationEmail(email);
-      toast.success(result.message);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "Could not resend verification email";
-      toast.error(message);
-    }
-  };
-
   const switchMode = (nextMode: "login" | "signup" | "forgot") => {
     setMode(nextMode);
     setPassword("");
@@ -163,14 +135,14 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.18),_transparent_38%),linear-gradient(160deg,#f4f7ff_0%,#ffffff_46%,#eff9f6_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.2),_transparent_35%),linear-gradient(160deg,#0f172a_0%,#111827_48%,#020617_100%)] flex items-center justify-center p-4 transition-colors duration-300">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.18),_transparent_38%),linear-gradient(160deg,#f4f7ff_0%,#ffffff_46%,#eff9f6_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(129,140,248,0.16),_transparent_35%),linear-gradient(160deg,#334155_0%,#1e293b_55%,#334155_100%)] flex items-center justify-center p-4 transition-colors duration-300">
       <div className="w-full max-w-xl">
         <div className="mb-4 flex justify-end">
           <Button
             type="button"
             variant="outline"
-            className="rounded-full border-white/60 bg-white/70 backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100"
-            onClick={() => setIsDarkMode((value) => !value)}
+            className="rounded-full border-white/60 bg-white/70 backdrop-blur dark:border-slate-500 dark:bg-slate-700/70 dark:text-slate-100"
+            onClick={toggleTheme}
           >
             {isDarkMode ? <SunMedium className="mr-2 h-4 w-4" /> : <MoonStar className="mr-2 h-4 w-4" />}
             {isDarkMode ? "Light mode" : "Dark mode"}
@@ -184,22 +156,16 @@ export function LoginPage() {
             </div>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            {mode === "forgot" ? "Recover your account" : "AI Library System"}
+            {mode === "forgot" ? "Recover your account" : "AI Library"}
           </h1>
           <p className="text-gray-600 dark:text-slate-300">
             {mode === "forgot"
               ? "Send yourself a secure reset link and create a new password."
-              : "Email/password accounts with Google sign-in and polished recovery flows."}
+              : "Sign in to browse your library, save books, and ask for book recommendations."}
           </p>
-          <div className="flex justify-center gap-2 mt-4">
-            <Badge variant="secondary">v0.9</Badge>
-            <Badge variant="outline" className="dark:border-slate-700 dark:text-slate-100">
-              Auth Upgrade
-            </Badge>
-          </div>
         </div>
 
-        <Card className="border-white/70 bg-white/88 shadow-xl shadow-slate-200/60 backdrop-blur dark:border-slate-700/60 dark:bg-slate-900/85 dark:shadow-black/30">
+        <Card className="border-white/70 bg-white/88 shadow-xl shadow-slate-200/60 backdrop-blur dark:border-slate-600/60 dark:bg-slate-700/75 dark:shadow-black/15">
               <CardHeader>
                 <div className="flex items-center justify-between gap-3">
                   <div>
@@ -210,14 +176,14 @@ export function LoginPage() {
                       {mode === "login"
                         ? "Sign in with your email and password or continue with Google"
                         : mode === "signup"
-                        ? "Create an account. Email verification is required before first login"
+                        ? "Create an account for your library experience"
                         : "Enter your account email and Supabase will send a recovery link"}
                     </CardDescription>
                   </div>
-                  <Badge variant="outline" className="gap-1 dark:border-slate-700 dark:text-slate-100">
+                  <div className="flex items-center gap-1 text-sm text-indigo-600 dark:text-cyan-300">
                     <Sparkles className="w-3.5 h-3.5" />
-                    Premium Flow
-                  </Badge>
+                    <span>Secure access</span>
+                  </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-3">
                   <Button
@@ -242,7 +208,7 @@ export function LoginPage() {
                     <Button
                       type="button"
                       variant="outline"
-                      className="w-full h-12 justify-center gap-3 border-slate-200 bg-white/90 text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-100 dark:hover:bg-slate-800"
+                      className="w-full h-12 justify-center gap-3 border-slate-200 bg-white/90 text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-700/60 dark:text-slate-100 dark:hover:bg-slate-600/80"
                       onClick={() => {
                         void startGoogleLogin().catch((error) => {
                           const message = error instanceof Error ? error.message : "Could not start Google sign-in";
@@ -260,7 +226,7 @@ export function LoginPage() {
                         <div className="w-full border-t border-gray-200 dark:border-slate-700" />
                       </div>
                       <div className="relative flex justify-center">
-                        <span className="bg-white dark:bg-slate-900 px-3 text-xs uppercase tracking-[0.2em] text-gray-400 dark:text-slate-500">
+                        <span className="bg-white dark:bg-slate-700 px-3 text-xs uppercase tracking-[0.2em] text-gray-400 dark:text-slate-300">
                           or
                         </span>
                       </div>
@@ -280,7 +246,7 @@ export function LoginPage() {
                           placeholder="Enter your full name"
                           value={name}
                           onChange={(event) => setName(event.target.value)}
-                          className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                          className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                           disabled={isSubmitting}
                         />
                       </div>
@@ -300,7 +266,7 @@ export function LoginPage() {
                         placeholder="name@gmail.com"
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
-                        className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                        className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                         disabled={isSubmitting}
                       />
                     </div>
@@ -321,7 +287,7 @@ export function LoginPage() {
                             placeholder={mode === "login" ? "Enter your password" : "Create a strong password"}
                             value={password}
                             onChange={(event) => setPassword(event.target.value)}
-                            className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                            className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                             disabled={isSubmitting}
                           />
                         </div>
@@ -339,7 +305,7 @@ export function LoginPage() {
                               placeholder="Repeat your password"
                               value={confirmPassword}
                               onChange={(event) => setConfirmPassword(event.target.value)}
-                              className="pl-10 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100"
+                              className="pl-10 dark:border-slate-600 dark:bg-slate-600/45 dark:text-slate-100"
                               disabled={isSubmitting}
                             />
                           </div>
@@ -369,23 +335,8 @@ export function LoginPage() {
                   </Button>
                 </form>
 
-                {mode !== "forgot" ? (
-                  <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 dark:border-amber-500/30 dark:bg-amber-500/10">
-                    <p className="text-sm font-medium text-amber-900 dark:text-amber-200">Email verification is required</p>
-                    <p className="mt-1 text-sm text-amber-800 dark:text-amber-100/80">
-                      Supabase will send the confirmation email through your SMTP setup before password login is allowed.
-                    </p>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      className="mt-2 h-auto px-0 text-amber-900 hover:bg-transparent dark:text-amber-200"
-                      onClick={handleResendVerification}
-                    >
-                      Resend verification email
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-slate-700 dark:bg-slate-950/50">
+                {mode === "forgot" ? (
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-slate-600 dark:bg-slate-600/35">
                     <p className="text-sm font-medium text-slate-900 dark:text-slate-100">Recovery flow</p>
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                       Supabase emails a reset link. When the link opens, this app will route you to a secure password update screen.
@@ -399,16 +350,16 @@ export function LoginPage() {
                       Back to sign in
                     </Button>
                   </div>
-                )}
+                ) : null}
               </CardContent>
         </Card>
 
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-500 dark:text-slate-400">
-            Modern premium auth UI with dark mode, inline validation, and recovery support
+            Secure sign-in with dark mode, inline validation, and recovery support
           </p>
           <p className="text-xs text-gray-400 dark:text-slate-500 mt-1">
-            Authentication is handled by Supabase. Your Python backend is now reserved for future protected app data.
+            Authentication is handled by Supabase, and recommendations are delivered through the app backend.
           </p>
         </div>
       </div>
